@@ -1,8 +1,7 @@
 ---
-title: "Virus Sequence Analysis Project"
+title: "[Insert Virus Name Here] Sequence Analysis Project"
 author: "Your Name"
 date: "[Change this date]"
-virus: "Name of your virus"
 accession: "Accession #"
 
 ---
