@@ -1,13 +1,13 @@
 ---
-title: "[Insert Virus Name Here] Sequence Analysis Project"
-author: "Your Name"
-date: "[Change this date]"
-accession: "Accession #"
+Final: "[Insert Virus Name Here] Sequence Analysis Project"
+Author: "Your Name"
+Date: "[Change this date]"
+Accession: "Accession #"
 
 ---
 
 # Introduction
-Make sure to have a look at the suggested powerpoint to help guide you!
+Make sure to have a look at the suggested powerpoint to help guide you! Include some pictures (make sure to cite sources!)
 
 - **Viral classification:**  
   - *ICTV classification*: [Insert ICTV classification here with citation].  
