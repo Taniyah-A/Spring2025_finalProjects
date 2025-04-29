@@ -11,7 +11,7 @@ We welcome your README! Please follow these steps:
 
 Thank you for contributing!
 
-Here are several Markdown tutorials suitable for upper-level undergraduates, ranging from interactive guides to video walkthroughs and best-practice articles:
+Here are several Markdown tutorials:
 
 ## Interactive and Written Tutorials
 
