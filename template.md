@@ -7,6 +7,7 @@ accession: "Accession #"
 ---
 
 # Introduction
+Make sure to have a look at the suggested powerpoint to help guide you!
 
 - **Viral classification:**  
   - *ICTV classification*: [Insert ICTV classification here with citation].  
@@ -47,6 +48,32 @@ accession: "Accession #"
 
 # Methods
 
-1. **Download sequence by accession number**  
-   - Use the provided accession number (Column X) to download the viral genome sequence.
+1. **First, I downloaded the viral sequence by accession number, and selected XXX close relatives to identify a most recent common ancesstor**  Use the provided accession number (Column X) to download the viral genome sequence. Show the python code for each of the functions you performed.
 
+```python
+#Insert python code after each step
+```
+...Follow the additional methods instructions in the text. Make sure to include your code where relevant! For example, if you used a slurm script, make sure to paste it in here.
+
+e.g. 
+Align your sequences using the MAFFT slurm script
+```bash
+#!/bin/bash
+#SBATCH --job-name=mafft_align
+mafft --auto input.fasta > aligned.fast
+```
+     
+
+# Results and Discussion
+
+Present your results, including tables, figures, and summary statistics. This should be written more like a text document. Make sure you follow the instructions about which plots to paste within here and reference them as figures (e.g., Fig. 1) when you are describing them.
+
+(10 points) Hydrophobicity plot agains the E.coli proteome
+(10 points) Identify any of your outlier hydrophobic proteins and BLAST them. What did these sequences annotate as? Might they have any important function to viral entry? 
+(10 points) Plot the genome size of your virus relative to other viruses (see code from lab 9.12b). 
+(20 points) Phylogeny and model selection. Use figtree to root the tree to your outgroup, make it look nice by ordering the nodes, increasing tip label size. State and interpret the best fit model used to infer this phylogeny. Display the bootstrap values. Discuss about your results. What are the three closest relatives of your virus, does it suggest a host switch? Are the branches well-supported by bootstrap values?
+
+
+# References Cited
+
+Use at least five references, formatted using a numbering system (1) or (Doe, et al. 2024). List the references in the appropriate bibliography format here. Use markdown to have all of your text references link to the bottom part of the page to where the reference is listed.
