@@ -1,7 +1,9 @@
 ---
 title: "Virus Sequence Analysis Project"
 author: "Your Name"
-date: 
+date: "[Change this date]"
+virus: "Name of your virus"
+accession: "Accession #"
 
 ---
 
@@ -9,7 +11,7 @@ date:
 
 - **Viral classification:**  
   - *ICTV classification*: [Insert ICTV classification here with citation].  
-  - *Baltimore classification*: [Insert Baltimore group and explanation here][6][8].
+  - *Baltimore classification*: [Insert Baltimore group and explanation here].
 
 - **Physical size:**  
   - The physical size of [your virus] is approximately XX nm, which is [smaller/larger] than a typical human cell (~10,000 nm) and [smaller/larger] than SARS-CoV-2 (~120 nm) [insert citation].
