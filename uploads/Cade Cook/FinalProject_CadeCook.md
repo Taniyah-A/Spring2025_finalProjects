@@ -300,7 +300,7 @@ https://researchgate.net/figure/Mammarenavirus-structure-and-genome-composition-
 
 Here’s the genome size histogram showing Bear Canyon Virus relative to other viruses:
 
-![Genome Size Histogram](viral_genome_histogram.png)
+![Genome Size Histogram](genome_size_comparison.png)
 
 
 ## Figtree
