@@ -184,7 +184,7 @@ plt.show()
 ### Phylogeny and Model  
 Using FigTree, the tree was rooted to MT138056, with ordered nodes and increasing the tip label size. The closest relatives of MH973742 were MK059759, MK059755, and MK059758. The  best fit model used to infer this phylogeny was the Kimura 2-Parameter model because I was comparing the virus the other closely related viruses, what this model excels at. If I were to use more unqiue and different viruses I would of had to use a different model. Based on the results there is no evidence that the host switch had happened, which is why the virus does not have any angetic shifts. Across the graph we have high bootstrap values which suggest the branches are well supported by the values. The tree created was important because not only did I find the cloest relatives for the virus but, was able to compare all 18 viruses with each. 
 
-![Phylogeny Tree](all_sequences_aligned.fasta.treefile.pdf)
+![Phylogeny Tree](all_sequences_aligned.fasta.treefile.png)
 
 ---
 
@@ -197,7 +197,7 @@ Using FigTree, the tree was rooted to MT138056, with ordered nodes and increasin
 ![Genome Size Plot](genome_size_plot.png)
 
 ### Phylogeny Tree  
-![Phylogeny Tree](all_sequences_aligned.fasta.treefile.pdf)
+![Phylogeny Tree](all_sequences_aligned.fasta.treefile.png)
 
 
 ## V. References
