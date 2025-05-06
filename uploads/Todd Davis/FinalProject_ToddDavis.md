@@ -71,6 +71,173 @@ Again, no. Anelloviruses, including GBaV-5, are not associated with disease in b
 # Methods
 ---     
 
+**Step 1. Download Virus Sequences**
+
+from Bio import Entrez 
+Entrez.email = "tdavi195@charlotte.edu"
+handle = Entrez.efetch(db="nucleotide", id="OP629194", rettype="fasta", retmode="text")
+record = handle.read()
+handle.close()
+with open("OP629194.fasta", "w") as f:
+f.write(record)
+
+**Step 2. Find ORFs Bigger than 300bp**
+
+from Bio import SeqIO
+from Bio.Seq import Seq
+from Bio.SeqUtils import nt_search
+
+file_path = "OP629194.fasta"
+record = SeqIO.read(file_path, "fasta")
+sequence = record.seq
+
+def find_orfs(sequence, min_length=300):
+    orfs = []
+    for frame in range(3): # Check in all 3 frames
+        translated = sequence[frame:].translate()
+    start = None
+    for i in range(len(translated)):
+        if translated[i] == 'M' and start is None:
+            start = i
+    elif translated[i] == '*' and start is not None:
+    if i - start >= min_length: 
+            orfs.append(sequence[frame + start*3 : frame + i*3])
+    start = None
+    return orf
+
+orfs = find_orfs(sequence, min_length=300)
+
+print(f"Found {len(orfs)} ORFs longer than 300 bp.")
+for idx, orf in enumerate(orfs, 1):
+ print(f"ORF {idx}: Length {len(orf)} bp")
+
+with open("OP629194_ORFs.fasta", "w") as output_file:
+ for idx, orf in enumerate(orfs, 1):
+    output_file.write(f">ORF_{idx}\n")
+ output_file.write(f"
+                   
+print("ORFs saved to OP629194_ORFs.fasta")
+
+**Step 3. Exporting the Proteome File**
+
+from Bio import SeqIO
+
+orfs = list(SeqIO.parse("OP629194_ORFs.fasta", "fasta"))
+
+proteins = []
+for orf in orfs:
+    protein_seq = orf.seq.translate(to_stop=True)
+    proteins.append(protein_seq)
+
+with open("OP629194_proteome.fasta", "w") as out_file:
+    for idx, (orf, prot) in enumerate(zip(orfs, proteins), 1):
+        out_file.write(f">Protein_{idx}_from_{orf.id}_Length_{len(prot)}aa\n")
+        out_file.write(str(prot) + "\n")
+
+print(f"{len(proteins)} proteins saved to OP629194_proteome.fasta")
+
+**Step 4. Bulk Download Sequences from NCBI**
+
+import numpy as np
+from Bio import Entrez
+import sys; sys.path.append(".")
+email = "tdavi195@charlotte.edu"
+
+accession_codes = {
+    "Pitorquevirus": [
+        "OP629190", "OP629191", "OP629192", "OP629193", "OP629195",
+        "OP629196", "OP629197", "AB076002", "MF327548", "MF327541",
+        "MF327547", "MF327540", "MF327542", "MF327550", "ON638692"
+    ],
+    "Anelloviridae": [
+        "OK665854", "KF373760", "M55918", "AF345523", "MN994854"
+    ],
+    "Outgroup": ["JN632576"]
+}
+
+from Bio import Entrez
+import time
+def fetch_fasta_sequences(accession_list, email="tdavi195@charlotte.edu"):
+ Entrez.email = email
+ sequences = {}
+ for accession in accession_list:
+ try:
+ with Entrez.efetch(
+ db="nucleotide",
+ id=accession,
+ rettype="fasta",
+ retmode="text"
+ ) as handle:
+ fasta_data = handle.read().strip()
+ sequences[accession] = fasta_data
+ print(f"Retrieved: {accession}")
+ time.sleep(0.35)
+ except Exception as e:
+ print(f"Error retrieving {accession}: {str(e)}")
+ sequences[accession] = None
+ return sequences
+
+accession_list = [
+    "OP629190", "OP629191", "OP629192", "OP629193", "OP629195",
+    "OP629196", "OP629197", "AB076002", "MF327548", "MF327541",
+    "MF327547", "MF327540", "MF327542", "MF327550", "ON638692",
+    "OK665854", "KF373760", "M55918", "AF345523", "MN994854",
+    "JN632576"
+]
+
+sequences = fetch_fasta_sequences(accession_list)
+
+with open("all_sequences.fasta", "w") as f:
+ for acc, seq in sequences.items():
+ if seq:
+ f.write(seq + "\n")
+
+**Step 5. MAFFT Alignment**
+
+from Bio import Entrez
+from Bio import SeqIO
+from io import StringIO
+import time
+def calculate_sequence_lengths(sequences, accession_codes):
+ print("\n{:40} | {:15} | {}".format("Virus Name", "Accession", "Sequence Length"))
+ print("-" * 70)
+
+ for name, accession in accession_codes.items():
+ fasta = sequences.get(name)
+ if not fasta:
+ print(f"{name[:40]:40} | {accession:15} | {'Retrieval failed':15}")
+ continue
+
+ try:
+ record = SeqIO.read(StringIO(fasta), "fasta")
+ print(f"{name[:40]:40} | {accession:15} | {len(record.seq):,} bp")
+ except Exception as e:
+ print(f"{name[:40]:40} | {accession:15} | {'Invalid format':15}")
+
+calculate_sequence_lengths(fasta_sequences, accession_codes)
+
+import subprocess
+subprocess.run(["mafft", "--auto", "all_sequences.fasta"], stdout=open("all_sequences_aligned.fasta", "w"))
+print("MAFFT alignment saved to 'all_sequences_aligned.fasta'")
+
+**Step 6. Construct Phylogenetic Tree**
+
+from Bio import Phylo, AlignIO
+from Bio.Phylo.TreeConstruction import DistanceCalculator, DistanceTreeConstructor
+aln = AlignIO.read("all_sequences_aligned.fasta", "fasta")
+print("Alignment loaded with", len(aln), "sequences.")
+calculator = DistanceCalculator('identity')
+distance_matrix = calculator.get_distance(aln)
+print("Distance matrix:\n", distance_matrix)
+constructor = DistanceTreeConstructor()
+nj_tree = constructor.nj(distance_matrix)
+Phylo.draw(nj_tree)
+Phylo.write(nj_tree, "virus_tree.nwk", "newick")
+print("Tree saved to virus_tree.nwk")  
+
+**Step 7. Export to FigTree and Assign Bootstrap Values from IQTree**
+Following the construction of the tree, I downloaded it to my laptop and used FigTree to view the tree. Additionally, I used IQTree to add bootstrap values.
+    
 # Results and Discussion
 ---
 
