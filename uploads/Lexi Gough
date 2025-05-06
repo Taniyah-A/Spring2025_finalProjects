@@ -1,0 +1,62 @@
+---
+Final: "Influenza A Virus Sequence Analysis Project"
+Author: "Lexi Gough"
+Date: "May 6th, 2025"
+Accession: "Accession PV572966.1"
+
+---
+
+# Introduction
+Make sure to have a look at the suggested powerpoint to help guide you! Include some pictures (make sure to cite sources!)
+
+- **Viral classification:**  
+  - *ICTV classification*: https://ictv.global/taxonomy/taxondetails?taxnode_id=202403956&ictv_id=ICTV19710226 
+    Realm: Riboviria
+    Kingdom: Orthornavirae
+    Phylum: Negarnaviricota
+    Subphylum: Polyploviricotina
+    Class: Insthoviricetes
+    Order: Articulavirales
+    Family: Orthomyxoviridae
+    Genus: Alphainfluenzavirus
+    Species: Alphainfluenzavirus influenzae
+  - *Baltimore classification*: https://www.ncbi.nlm.nih.gov/datasets/taxonomy/1937270/ 
+      Influenza A is a single-stranded RNA, negative sense virus
+
+- **Physical size:**  
+  - The physical size of influenza A is approximately 100 nm, which is smaller than a typical human cell (~10,000 nm) and smaller than SARS-CoV-2 (~120 nm). https://ictv.global/report_9th/RNAneg/Orthomyxoviridae 
+
+- **Shape and envelope:**  
+  - The virus exhibits a spherical morphology and does possess an envelope. https://ictv.global/report_9th/RNAneg/Orthomyxoviridae
+
+- **Discovery and outbreaks:**  
+  - Influenza A was first described in the 15th century Italy (https://www.cdc.gov/pinkbook/hcp/table-of-contents/chapter-12-influenza.html#:~:text=Wilson%20Smith%2C%20Christopher%20Andrewes%2C%20and,grown%20in%20embryonated%20hens'%20eggs). 
+  - Influenza A is still prevalent to this day. 
+
+- **Host range:**  
+  - This virus infects humans and many mammals, and is generalist https://www.cdc.gov/pinkbook/hcp/table-of-contents/chapter-12-influenza.html#:~:text=Wilson%20Smith%2C%20Christopher%20Andrewes%2C%20and,grown%20in%20embryonated%20hens'%20eggs..
+
+- **Cell entry:**  
+  - The virus penetrates the host cell via receptor-mediated endocytosis https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2018.01581/full.
+
+- **Replication strategy:**  
+  - Influenza A relies on host machinery and replicates by uses its RNA-dependent RNA polymerase to transcribe and replicate its negative-sense RNA genome in the host cell nucleus https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2018.01581/full.
+
+- **Release mechanism:**  
+  - Viral progeny are released by budding https://courses.lumenlearning.com/wm-biology2/steps-of-virus-infections-text-version/#:~:text=The%20influenza%20virus%20is%20packaged,to%20make%20new%20virus%20particles..
+
+- **Latency:**  
+  - Influenza A does not show latency. A study by A. Cori, Department of Infectious Disease Epidemiology, estimated the average latent period for influenza A to be 1.6 days https://www.sciencedirect.com/science/article/pii/S175543651200031X.
+  - It causes acute infections that progresses within a few days.
+
+- **Equilibrium and antigenic shift:**  
+  - Influenza A is not in equilibrium with humans. It is considered to be a dynamic virus that continuously evolves and adapts.
+  - Due to the dynamic nature, influenza A does undergo antigenic shift. https://www.sciencedirect.com/topics/medicine-and-dentistry/antigenic-shift#:~:text=Among%20the%20influenza%20A%20viruses,antigenic%20drift%20and%20antigenic%20shift. 
+
+- **Vaccines:**  
+  - Several different vaccine types are widely available. The most common types of vaccines are inactivated virus and live attenuated influenza vaccine https://www.mdpi.com/2076-393X/3/2/373.
+
+- **Antiviral drugs:**  
+  - Several antiviral drugs are available to treat Influenza A virus infections https://www.researchgate.net/publication/362438839_Popular_Influenza_Antiviral_Drugs_Mechanisms_Efficacy_and_Resistance. 
+  - Neuraminidase Inhibitors (NAIs): blocks neuraminidase enzyme, preventing the virus from budding from the host cell
+  - Cap-Dependent Endonuclease Inhibitor: Blocks viral RNA transcription by inhibiting cap-snatchin
