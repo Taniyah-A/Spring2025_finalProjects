@@ -41,7 +41,7 @@ This virus infects This virus infects grizzly bears, and is host-specific (4). T
 
 
 - **Cell entry:**  
-The virus penetrates the host cell via [mechanism, e.g., endocytosis, membrane fusion, receptor-mediated entry] [insert citation].
+The virus is hypothesized to penetrate the host cell via clathrin-mediated endocytosis.
 
 
 - **Replication strategy:**  
