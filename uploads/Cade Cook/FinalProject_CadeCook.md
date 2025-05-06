@@ -306,5 +306,3 @@ Here’s the genome size histogram showing Bear Canyon Virus relative to other v
 ## Figtree
 
 ![Bear Canyon Figtree](Virus_FigTree.png)
-
-
