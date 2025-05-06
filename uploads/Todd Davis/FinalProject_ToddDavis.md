@@ -74,6 +74,10 @@ Again, no. Anelloviruses, including GBaV-5, are not associated with disease in b
 # Results and Discussion
 ---
 
+![Genome Size Comparison](Virus_SizeComparison.png)
+
+![Virus FigTree](Virus_FigTree.png)
+
 # References Cited
 
 1. International Committee on Taxonomy of Viruses (ICTV). (2024). Virus taxonomy. https://ictv.global/taxonomy/taxondetails?taxnode_id=202420419
