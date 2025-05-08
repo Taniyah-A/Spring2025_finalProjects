@@ -196,13 +196,13 @@ Phylo.draw_ascii(nj_tree)
 
 Unfortunately both the Hydrophobicity plot and genome plot were unable to be made due to errors beyond my own understanding. To sidestep this issue there are other visual interpretations of the data available.
 
-!(Fubara_error.png)
+![failure](Fubara_error.png)
 
-!(Fubara_Hydro_scores.png)
+![Command Line](Fubara_Hydro_scores.png)
 
 All hydrophobicity scores for JN809820 are all below zero, meaning that the genome is more hydrophilic than hydrophobic.
 
-!(Fubara_Genome_Size_Comparison.svg)
+![Thank LibreOffice Calc and Google Sheets](Fubara_Genome_Size_Comparison.svg)
 
 The closeset relatives to JN809820 are DQ866132 (Ageratum yellow vein Hualian virus), MF402918 (Datura leaf curl virus), and AJ223191 (Chayote yellow mosaic virus). A lack of agentic shifts likely disproves any host switches. Observing the node ages shows that many of the branches are closely related but the graph as a whole has little overlap outside of being in the same order.
 
