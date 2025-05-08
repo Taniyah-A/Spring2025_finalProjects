@@ -37,13 +37,14 @@ Apis mellifera virus 1 is a DNA virus in the genus Torbevirus, and the family Re
 ## II. Methods
 1. First, I downloaded the viral sequence by accession number of MH973742 , and selected 3 close relatives to identify a most recent common ancesstor. The code I used to achieve this is listed below. I got the accession number from the spreadsheet document. 
 
+```python
 accession_codes = [
     "MH973742", "MK059759", "MK059757", "MK059754", "MK059756",
     "MK059758", "KY349925", "MK059755", "MK059763", "MK059767",
     "MK059765", "MK059762", "MK059764", "MK059760", "MK059766",
     "MT138056", "NC_045512.2", "ON677309", "MZ710935", "MW881235",
     "KJ647417"
-    
+``` 
 
 2. The next step for my methods was to find open reading frames longer than 300bp, while making sure to determine the correct start and stop codons of the virus. Doing this helps with getting better and more functional proteins.  The code to achieve is this below. Once my code finished running I made sure to export the proteome file.
 
@@ -76,6 +77,8 @@ SeqIO.write(orfs, "MH973742_proteome.fasta", "fasta")
 
 3. I then selected 15 viruses from the same genus, two additional viruses in a different genus but the same family, and 1 outgroup from a different family in the same order. I wasn't able to select five additional viruses in a different genus but the same family because only two viruses fit the crteria that was needed. It's important to get different viruses because it allows to get more accurate data because of your broader input. In this specific case multiple viruses from the same genus helps with a more accurate answer for finding the top 3 cloest relative to Apis mellifera virus 1.
 4. Then I formatted an accession code object and used the `calculate_sequence_lengths` function to output the lengths of all your downloaded genomes. This was an important step because it helps us ensure an accurate dataset. The code to achieve is this below.
+
+```python
    from Bio import SeqIO
 
 def calculate_sequence_lengths(fasta_file, accession_codes):
@@ -87,9 +90,13 @@ def calculate_sequence_lengths(fasta_file, accession_codes):
     for acc in accession_codes:
         length = seq_lengths.get(acc, "Not found")
         print(f"{acc}: {length} bp")
+```
+
 
 5. Used a MAFFT SLURM script to align all sequences. The alignment that we got was then used to create a phylogenetic tree. The code to achieve is this below.
-   #!/bin/bash
+
+```python
+    #!/bin/bash
 #SBATCH --job-name=mafft_align
 #SBATCH --output=mafft_output.txt
 #SBATCH --error=mafft_error.txt
@@ -99,8 +106,11 @@ def calculate_sequence_lengths(fasta_file, accession_codes):
 
 module load mafft/7.525woe
 mafft --auto all_sequences.fasta > all_sequences_aligned.fasta
+```
 
 6. Constructed a phylogenetic tree using IQ-TREE with model selection and added bootstrap values. When using IQ-TREE itself I made sure to make it look nice by ordering the nodes, increasing tip label size. The code to achieve is this below.
+
+```python
    #!/bin/bash
 #SBATCH --job-name=iqtree_phylogeny
 #SBATCH --output=iqtree_output.txt
@@ -111,7 +121,7 @@ mafft --auto all_sequences.fasta > all_sequences_aligned.fasta
 
 module load iqtree
 iqtree -s all_sequences_aligned.fasta -m TEST -bb 1000
-
+```
 
 ---
 
