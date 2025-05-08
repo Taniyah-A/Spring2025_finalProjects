@@ -72,7 +72,7 @@ def find_orfs(seq, min_len=300):
 record = SeqIO.read("MH973742.fasta", "fasta")
 orfs = find_orfs(record.seq)
 SeqIO.write(orfs, "MH973742_proteome.fasta", "fasta")
-
+```
 
 3. I then selected 15 viruses from the same genus, two additional viruses in a different genus but the same family, and 1 outgroup from a different family in the same order. I wasn't able to select five additional viruses in a different genus but the same family because only two viruses fit the crteria that was needed. It's important to get different viruses because it allows to get more accurate data because of your broader input. In this specific case multiple viruses from the same genus helps with a more accurate answer for finding the top 3 cloest relative to Apis mellifera virus 1.
 4. Then I formatted an accession code object and used the `calculate_sequence_lengths` function to output the lengths of all your downloaded genomes. This was an important step because it helps us ensure an accurate dataset. The code to achieve is this below.
