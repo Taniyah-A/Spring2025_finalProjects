@@ -18,18 +18,18 @@ Apis mellifera virus 1 is a DNA virus in the genus Torbevirus, and the family Re
 - **Genus:** Torbevirus  
 - **Species:** Torbevirus brisa
 
-- Baltimore classification: The Baltimore classification of the virus is class II, because it is a single stranded DNA [1](#ref1).).
-- Physical size: The physical size of Apis mellifera virus 1 is approximately 30 nm, which is smaller than a typical human cell (~10,000 nm) and smaller than SARS-CoV-2 (~120 nm) (Galvez et al., 2022).
-- Shape and envelope: The virus exhibits a icosahedral, a more smaller circular shape, morphology and does not posses an envelope which is similar to other viruses of the same family. (Galvez et al., 2022; ICTV, 2023).
-- Discovery and outbreaks: Apis mellifera virus 1 was first described in 2019 by accident when scientists were trying to find a different virus of the same family. (Kraberger et al., 2019; Galvez et al., 2022). There haven't been any prominent outbreaks of the virus which may lead to why there aren't many known facts and research done on this virus. The Redondoviridae family as a whole is fairly new with many viruses still being researched in the more early stages.
-- Host range: This virus infects Apis mellifera, more commonly known as the western honey bee and is host specfic virus because it has only been found with bees. (Kraberger et al., 2019; ICTV, 2023).
-- Cell entry: The virus penetrates the host cell via the endocytoic pathway like many other non enveloped viruses. This is the best way for the virus to get to the host cell, with the help of using virus receptors. (Marsh & Helenius, 2006).
-- Replication strategy: Apis mellifera virus 1 relies on host machinery and replicates by hijacking the host and relying on its replication enzymes. Once the virus hijacks the host, it then uses the DNA polymerase to turn DNA into double-stranded DNA (Baltimore, 1971; ICTV, 2023).
-- Release mechanism: Viral proteins are released by apoptosis, a process in which the host cell is killed, common among non-enveloped viruses and other viruses within the same family and genus. (Elmore, 2007).
-- Latency: The virus does not show any signs of latency, similar to many non-enveloped viruses (Young & Rickinson, 2004; ICTV, 2023).
-- Equilibrium and antigenic shift: The virus is not considered in equilibrium with humans, due to the fact the virus has only been known to effect bees. It also does not show any antigenic shift, for the same reason. Since it's only found in bees and doesn't change shift any to different hosts, it doesn't have any antigenic shift. (Morens & Taubenberger, 2010; ICTV, 2023).
-- Vaccines: There are no current vaccines for Apis Mellifera virus 1. Since it was only discovered in 2019, with no prominent outbreaks since then, and it hasn't spread to humans yet with any known diseases there haven't been any vaccines created yet. If there is a major outbreak, or the threat for this virus increases then we’ll have more research towards the virus and potentially a vaccine. (Galvez et al., 2022; Chen et al., 2021).
-- Antiviral drugs: There aren't any known antiviral drugs for this virus. As the honeybee is infected more and more it becomes heavily agressive until it eventually dies. (Chen et al., 2021).
+- Baltimore classification: The Baltimore classification of the virus is class II, because it is a single stranded DNA [1](#ref1)).
+- Physical size: The physical size of Apis mellifera virus 1 is approximately 30 nm, which is smaller than a typical human cell (~10,000 nm) and smaller than SARS-CoV-2 (~120 nm) [3](#ref3).
+- Shape and envelope: The virus exhibits a icosahedral, a more smaller circular shape, morphology and does not posses an envelope which is similar to other viruses of the same family [5](#ref5).
+- Discovery and outbreaks: Apis mellifera virus 1 was first described in 2019 by accident when scientists were trying to find a different virus of the same family [4](#ref4). There haven't been any prominent outbreaks of the virus which may lead to why there aren't many known facts and research done on this virus. The Redondoviridae family as a whole is fairly new with many viruses still being researched in the more early stages.
+- Host range: This virus infects Apis mellifera, more commonly known as the western honey bee and is host specfic virus because it has only been found with bees [5](#ref5).
+- Cell entry: The virus penetrates the host cell via the endocytoic pathway like many other non enveloped viruses. This is the best way for the virus to get to the host cell, with the help of using virus receptors [4](#ref4).
+- Replication strategy: Apis mellifera virus 1 relies on host machinery and replicates by hijacking the host and relying on its replication enzymes. Once the virus hijacks the host, it then uses the DNA polymerase to turn DNA into double-stranded DNA [1](#ref1).
+- Release mechanism: Viral proteins are released by apoptosis, a process in which the host cell is killed, common among non-enveloped viruses and other viruses within the same family and genus [6](#ref6).
+- Latency: The virus does not show any signs of latency, similar to many non-enveloped viruses [6](#ref6)).
+- Equilibrium and antigenic shift: The virus is not considered in equilibrium with humans, due to the fact the virus has only been known to effect bees. It also does not show any antigenic shift, for the same reason. Since it's only found in bees and doesn't change shift any to different hosts, it doesn't have any antigenic shift [7](#ref7).
+- Vaccines: There are no current vaccines for Apis Mellifera virus 1. Since it was only discovered in 2019, with no prominent outbreaks since then, and it hasn't spread to humans yet with any known diseases there haven't been any vaccines created yet. If there is a major outbreak, or the threat for this virus increases then we’ll have more research towards the virus and potentially a vaccine [7](#ref7).
+- Antiviral drugs: There aren't any known antiviral drugs for this virus. As the honeybee is infected more and more it becomes heavily agressive until it eventually dies [2](#ref2).
 
 
 ---
@@ -219,10 +219,10 @@ Using FigTree, the tree was rooted to MT138056, with ordered nodes and increasin
 
 # References Cited
 
-[1]. De Miranda, Joachim R., et al. "Standard methods for virus research in Apis mellifera." Journal of apicultural research 52.4 (2013): 1-56.
-[2]. Tantillo, Giuseppina, et al. "Virus infections of honeybees Apis mellifera." Italian journal of food safety 4.3 (2015): 5364.
-[3]. Lanzi, Gaetana, et al. "Molecular and biological characterization of deformed wing virus of honeybees (Apis mellifera L.)." Journal of virology 80.10 (2006): 4998-5009.
-[4]. Noël, Amélie, Yves Le Conte, and Fanny Mondet. "Varroa destructor: how does it harm Apis mellifera honey bees and what can be done about it?." Emerging Topics in Life Sciences 4.1 (2020): 45-57.
-[5]. Kraberger, Simona, et al. "Diverse single-stranded DNA viruses associated with honey bees (Apis mellifera)." Infection, Genetics and Evolution 71 (2019): 179-188.
-[6]. Chen, Yanping, Jeffery S. Pettis, and Mark F. Feldlaufer. "Detection of multiple viruses in queens of the honey bee Apis mellifera L." Journal of invertebrate pathology 90.2 (2005): 118-121.
-[7]. Beaurepaire, Alexis, et al. "Diversity and global distribution of viruses of the western honey bee, Apis mellifera." Insects 11.4 (2020): 239.
+<a id="ref1"></a>1. De Miranda, Joachim R., et al. *Standard methods for virus research in Apis mellifera.* Journal of Apicultural Research 52.4 (2013): 1–56.  
+<a id="ref2"></a>2. Tantillo, Giuseppina, et al. *Virus infections of honeybees Apis mellifera.* Italian Journal of Food Safety 4.3 (2015): 5364.  
+<a id="ref3"></a>3. Lanzi, Gaetana, et al. *Molecular and biological characterization of deformed wing virus of honeybees.* Journal of Virology 80.10 (2006): 4998–5009.  
+<a id="ref4"></a>4. Noël, Amélie, Yves Le Conte, and Fanny Mondet. *Varroa destructor: how does it harm Apis mellifera honey bees and what can be done about it?* Emerging Topics in Life Sciences 4.1 (2020): 45–57.  
+<a id="ref5"></a>5. Kraberger, Simona, et al. *Diverse single-stranded DNA viruses associated with honey bees (Apis mellifera).* Infection, Genetics and Evolution 71 (2019): 179–188.  
+<a id="ref6"></a>6. Chen, Yanping, Jeffery S. Pettis, and Mark F. Feldlaufer. *Detection of multiple viruses in queens of the honey bee Apis mellifera L.* Journal of Invertebrate Pathology 90.2 (2005): 118–121.  
+<a id="ref7"></a>7. Beaurepaire, Alexis, et al. *Diversity and global distribution of viruses of the western honey bee, Apis mellifera.* Insects 11.4 (2020): 239.
