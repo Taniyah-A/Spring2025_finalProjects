@@ -11,7 +11,7 @@ Make sure to have a look at the suggested powerpoint to help guide you! Include 
 
 - **Viral classification:**  
   - *ICTV classification*: Monodnaviria[^1].  
-  - *Baltimore classification*: ssDNA(+/-). Single-stranded DNA (ssDNA) are strands of nucleic acids lacking in hydrogen bonds typically found in viruses.
+  - *Baltimore classification*: Class II; ssDNA(+/-). Single-stranded DNA (ssDNA) are strands of nucleic acids lacking in hydrogen bonds typically found in viruses.
 
 - **Physical size:**  
   - The physical size of Ageratum yellow vein virus is approximately 22-30 nm, which is smaller than a typical human cell (~10,000 nm) and SARS-CoV-2 (~120 nm)[^2].
@@ -203,6 +203,8 @@ Unfortunately both the Hydrophobicity plot and genome plot were unable to be mad
 All hydrophobicity scores for JN809820 are all below zero, meaning that the genome is more hydrophilic than hydrophobic.
 
 ![Thank LibreOffice Calc and Google Sheets](Fubara_Genome_Size_Comparison.svg)
+
+![Really wish the bootstrap values worked](fubara_virus_tree.nwk.jpg)
 
 The closeset relatives to JN809820 are DQ866132 (Ageratum yellow vein Hualian virus), MF402918 (Datura leaf curl virus), and AJ223191 (Chayote yellow mosaic virus). A lack of agentic shifts likely disproves any host switches. Observing the node ages shows that many of the branches are closely related but the graph as a whole has little overlap outside of being in the same order.
 
