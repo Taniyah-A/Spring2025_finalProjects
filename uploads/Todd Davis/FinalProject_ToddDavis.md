@@ -251,7 +251,7 @@ This graph shows the genome size difference between my virus (GBaV-5) and three 
 From IQ-TREE, the model of best fit is: TVM+F+G4. The bootstrap values are fairly consistent within the separate clades, but there are some areas of uncertainty. The three closest relatives to my virus are GBaV-6, GBaV-8, and GBaV-3. This aligned with my expectation for 3 of the 7 additional grizzly bear anelloviruses to be closely related. It's also reasonable to infer that no host switch has occurred.
 
 ## Figure 3: Hydrophobocity Plot Error
-![Hydrophobocity Error](
+![Hydrophobocity Error](Extremely_Hydrophilic_Proteins.png)
 
 Unfortunately, I, and others who had a Baltimore Class II virus, ran into errors when it came to generating hydrophobicity values and their respective graphs. My ORFs came back as -0.99 and -0.79. Those values are extremely hydrophilic and are uncharacteristic for anelloviruses. 
 
