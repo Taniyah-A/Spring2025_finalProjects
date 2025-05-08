@@ -18,7 +18,7 @@ Apis mellifera virus 1 is a DNA virus in the genus Torbevirus, and the family Re
 - **Genus:** Torbevirus  
 - **Species:** Torbevirus brisa
 
-- Baltimore classification: The Baltimore classification of the virus is class II, because it is a single stranded DNA. (Baltimore, 1971; ICTV, 2023).
+- Baltimore classification: The Baltimore classification of the virus is class II, because it is a single stranded DNA [1].
 - Physical size: The physical size of Apis mellifera virus 1 is approximately 30 nm, which is smaller than a typical human cell (~10,000 nm) and smaller than SARS-CoV-2 (~120 nm) (Galvez et al., 2022).
 - Shape and envelope: The virus exhibits a icosahedral, a more smaller circular shape, morphology and does not posses an envelope which is similar to other viruses of the same family. (Galvez et al., 2022; ICTV, 2023).
 - Discovery and outbreaks: Apis mellifera virus 1 was first described in 2019 by accident when scientists were trying to find a different virus of the same family. (Kraberger et al., 2019; Galvez et al., 2022). There haven't been any prominent outbreaks of the virus which may lead to why there aren't many known facts and research done on this virus. The Redondoviridae family as a whole is fairly new with many viruses still being researched in the more early stages.
@@ -219,12 +219,10 @@ Using FigTree, the tree was rooted to MT138056, with ordered nodes and increasin
 
 # References Cited
 
-1 International Committee on Taxonomy of Viruses (ICTV). (2023). Virus taxonomy: 2022 release. https://ictv.global/taxonomy  
-2 Baltimore, D. (1971). Expression of animal virus genomes. *Bacteriological Reviews*.  
-3 Duerkop, B. A., & Hooper, L. V. (2013). Resident viruses and their interactions with the immune system. *Nature Immunology*.  
-4 Galvez, E. J. C., et al. (2022). Redondoviridae genomes from human and animal-associated samples. *Virology Reports*.  
-5 Marsh, M., & Helenius, A. (2006). Virus entry: open sesame. *Cell*.  
-6 Young, L. S., & Rickinson, A. B. (2004). Epstein–Barr virus: 40 years on. *Nature Reviews Cancer*.  
-7 Elmore, S. (2007). Apoptosis: a review of programmed cell death. *Toxicologic Pathology*.  
-8 Morens, D. M., & Taubenberger, J. K. (2010). Pandemic influenza: certain uncertainties. *Reviews in Medical Virology*.  
-9 Chen, Y., et al. (2021). Emerging viruses and therapeutic approaches: an overview. *Frontiers in Immunology*.
+[1]. De Miranda, Joachim R., et al. "Standard methods for virus research in Apis mellifera." Journal of apicultural research 52.4 (2013): 1-56.
+[2]. Tantillo, Giuseppina, et al. "Virus infections of honeybees Apis mellifera." Italian journal of food safety 4.3 (2015): 5364.
+[3]. Lanzi, Gaetana, et al. "Molecular and biological characterization of deformed wing virus of honeybees (Apis mellifera L.)." Journal of virology 80.10 (2006): 4998-5009.
+[4]. Noël, Amélie, Yves Le Conte, and Fanny Mondet. "Varroa destructor: how does it harm Apis mellifera honey bees and what can be done about it?." Emerging Topics in Life Sciences 4.1 (2020): 45-57.
+[5]. Kraberger, Simona, et al. "Diverse single-stranded DNA viruses associated with honey bees (Apis mellifera)." Infection, Genetics and Evolution 71 (2019): 179-188.
+[6]. Chen, Yanping, Jeffery S. Pettis, and Mark F. Feldlaufer. "Detection of multiple viruses in queens of the honey bee Apis mellifera L." Journal of invertebrate pathology 90.2 (2005): 118-121.
+[7]. Beaurepaire, Alexis, et al. "Diversity and global distribution of viruses of the western honey bee, Apis mellifera." Insects 11.4 (2020): 239.
