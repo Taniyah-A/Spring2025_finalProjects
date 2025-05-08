@@ -153,7 +153,7 @@ plt.tight_layout()
 plt.savefig("hydrophobicity_plot.png")
 plt.show()
 ```
-
+![Hydrophobicity Plot](hydrophobicity_plot_final.png)
 
 
 ### BLAST of Outlier Protein  
