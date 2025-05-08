@@ -18,7 +18,7 @@ Apis mellifera virus 1 is a DNA virus in the genus Torbevirus, and the family Re
 - **Genus:** Torbevirus  
 - **Species:** Torbevirus brisa
 
-- Baltimore classification: The Baltimore classification of the virus is class II, because it is a single stranded DNA [1](#1).
+- Baltimore classification: The Baltimore classification of the virus is class II, because it is a single stranded DNA [1](#ref1).).
 - Physical size: The physical size of Apis mellifera virus 1 is approximately 30 nm, which is smaller than a typical human cell (~10,000 nm) and smaller than SARS-CoV-2 (~120 nm) (Galvez et al., 2022).
 - Shape and envelope: The virus exhibits a icosahedral, a more smaller circular shape, morphology and does not posses an envelope which is similar to other viruses of the same family. (Galvez et al., 2022; ICTV, 2023).
 - Discovery and outbreaks: Apis mellifera virus 1 was first described in 2019 by accident when scientists were trying to find a different virus of the same family. (Kraberger et al., 2019; Galvez et al., 2022). There haven't been any prominent outbreaks of the virus which may lead to why there aren't many known facts and research done on this virus. The Redondoviridae family as a whole is fairly new with many viruses still being researched in the more early stages.
