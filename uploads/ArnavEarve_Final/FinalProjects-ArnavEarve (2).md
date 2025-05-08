@@ -37,15 +37,13 @@ Apis mellifera virus 1 is a DNA virus in the genus Torbevirus, and the family Re
 ## II. Methods
 1. First, I downloaded the viral sequence by accession number of MH973742 , and selected 3 close relatives to identify a most recent common ancesstor. The code I used to achieve this is listed below. I got the accession number from the spreadsheet document. 
 
-from Bio import Entrez, SeqIO
-
-Entrez.email = "aearve@uncc.edu"  # Your email
-handle = Entrez.efetch(db="nucleotide", id="MH973742", rettype="fasta", retmode="text")
-record = SeqIO.read(handle, "fasta")
-handle.close()
-
-with open("MH973742.fasta", "w") as f:
-    SeqIO.write(record, f, "fasta")
+accession_codes = [
+    "MH973742", "MK059759", "MK059757", "MK059754", "MK059756",
+    "MK059758", "KY349925", "MK059755", "MK059763", "MK059767",
+    "MK059765", "MK059762", "MK059764", "MK059760", "MK059766",
+    "MT138056", "NC_045512.2", "ON677309", "MZ710935", "MW881235",
+    "KJ647417"
+    
 
 2. The next step for my methods was to find open reading frames longer than 300bp, while making sure to determine the correct start and stop codons of the virus. Doing this helps with getting better and more functional proteins.  The code to achieve is this below. Once my code finished running I made sure to export the proteome file.
    from Bio import SeqIO
