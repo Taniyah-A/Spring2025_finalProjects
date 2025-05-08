@@ -331,10 +331,10 @@ The Bamboo Circovirus falls roughly in the middle of the pack when compared to o
 
 **Phylogeny Tree**
 
-<img src="FigTree.png" alt="FigTree plot, relatives" width="600"/>
+<img src="FigTree2.png" alt="FigTree plot, relatives" width="600"/>
 Figure 4
 
-For my tree I used the L-INS-i model to best fit my data. It stands for local pairwise alignment, iterative refinement, incorporating structural information. In MAFFT, it is one of the more accurate models, but the downside is how slow it is and computationally intensive. We can see our virus with its accession code: MF497827. Our outgroup is the MH782429.1 (Bovdisa virus) rooted at the top. Its three closest relatives are the dipodfec virus, rodent circovirus, and sonfela circovirus 1. There is no evidence of a host switch and the bootstrap values are not good at all.
+For my tree I used the GTR+F+I+G4 In MAFFT, it is one of the more accurate models, but the downside is how slow it is and computationally intensive. We can see our virus with its accession code: MF497827 and highlighted pink. Our outgroup is the MH782429.1 (Bovdisa virus) rooted at the top. Its three closest relatives are the dipodfec virus which is in green, rodent circovirus, and sonfela circovirus 1. There is no evidence of a host switch and the bootstrap values are not good at all.
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
