@@ -154,7 +154,6 @@ plt.savefig("hydrophobicity_plot.png")
 plt.show()
 ```
 
-![Hydrophobicity V E.coli Plot](hydrophobicity_plot_fixed.png)
 
 
 ### BLAST of Outlier Protein  
