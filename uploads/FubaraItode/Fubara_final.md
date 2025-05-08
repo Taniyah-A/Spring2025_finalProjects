@@ -2,7 +2,7 @@
 Final: "Ageratum yellow vein virus Sequence Analysis Project"
 Author: "Itode Fubara"
 Date: "5/6/2025"
-Accession: "Accession #JN809820"
+Accession: "JN809820"
 
 ---
 
@@ -190,6 +190,92 @@ print("Tree saved to virus_tree.nwk")
 
 Phylo.draw_ascii(nj_tree)
 
+```
+
+10. **Failed attempt with Hydrophobicity**
+```python
+# Calculate averages for exported proteins
+ecoli_data = calculate_hydrophobicities("ecoli_proteome.fasta", hydro_table)
+
+# Calculate averages for exported proteins
+sars_cov_2_data = calculate_hydrophobicities("JN809820_proteome.fasta", hydro_table)
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+def plot_hydrophobicity_comparison(ecoli_results, other_genome_results, 
+                                  ecoli_label="E. coli", other_label="Ageratum yellow vein Genome",
+                                  save_path=None):
+    """
+    Plot comparative hydrophobicity distributions between E. coli and Ageratum yellow vein virus
+    
+    Args:
+        ecoli_results: List of hydrophobicity dicts from calculate_hydrophobicities (E. coli)
+        other_genome_results: List of hydrophobicity dicts from calculate_hydrophobicities (other genome)
+        ecoli_label: Label for E. coli in legend
+        other_label: Label for other genome in legend
+        save_path: Optional path to save figure (e.g., "hydrophobicity_comparison.png")
+    """
+    plt.figure(figsize=(12, 6))
+    
+    # Extract hydrophobicity values
+    ecoli_hydro = [x['average_hydrophobicity'] for x in ecoli_results if not np.isnan(x['average_hydrophobicity'])]
+    other_hydro = [x['average_hydrophobicity'] for x in other_genome_results if not np.isnan(x['average_hydrophobicity'])]
+    
+    # Plot E. coli distribution
+    hist = sns.histplot(ecoli_hydro, bins=50, stat="density", 
+                       kde=True, color='royalblue', alpha=0.6,
+                       label=ecoli_label + " Distribution")
+    
+    # Calculate KDE for E. coli
+    kde = sns.kdeplot(ecoli_hydro, color='darkblue', linewidth=2, 
+                     label=f'{ecoli_label} KDE')
+    
+    # Create scatter plot for other genome with jitter
+    if other_hydro:
+        jitter = np.random.uniform(low=0, high=hist.get_ylim()[1]/2, 
+                                 size=len(other_hydro))
+        scatter = plt.scatter(other_hydro, jitter, color='crimson', alpha=0.5,
+                            edgecolor='black', linewidth=0.5, s=40,
+                            label=f'{other_label} Proteins')
+    
+    # Style plot
+    plt.title(f"Hydrophobicity Comparison: {ecoli_label} vs {other_label}", fontsize=14)
+    plt.xlabel("Average Hydrophobicity", fontsize=12)
+    plt.ylabel("Density / Protein Density", fontsize=12)
+    plt.grid(True, alpha=0.3)
+    plt.legend()
+    
+    # Add statistical annotations
+    textstr = '\n'.join((
+        f'{ecoli_label}:',
+        f'  N = {len(ecoli_hydro):,}',
+        f'  μ = {np.mean(ecoli_hydro):.2f} ± {np.std(ecoli_hydro):.2f}',
+        '',
+        f'{other_label}:',
+        f'  N = {len(other_hydro):,}',
+        f'  μ = {np.mean(other_hydro):.2f} ± {np.std(other_hydro):.2f}'))
+    
+    plt.gca().text(0.75, 0.95, textstr, transform=plt.gca().transAxes,
+                  fontsize=10, verticalalignment='top',
+                  bbox=dict(boxstyle='round', facecolor='white', alpha=0.8))
+    
+    # Save or display
+    if save_path:
+        plt.savefig(save_path, dpi=300, bbox_inches='tight')
+        print(f"Plot saved to {save_path}")
+    else:
+        plt.show()
+
+# Generate comparison plot
+plot_hydrophobicity_comparison(
+    ecoli_data,
+    sars_cov_2_data,
+    ecoli_label="E. coli",
+    other_label="Ageratum yellow vein Virus",
+    save_path="hydrophobicity_comparison.png"
+)
 ```
 
 # Results and Discussion
