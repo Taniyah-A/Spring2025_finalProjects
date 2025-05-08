@@ -22,7 +22,6 @@ Accession: OP629194
 
 *Baltimore classification*: Class II; signle-stranded DNA (ssDNA) viruses (2).
 
-
 - **Physical size:**  
 The physical size of Grizzly bear anellovirus 5 (GBaV-5) is approximately 30 nm, which is smaller than a typical human cell (~10,000 nm) and smaller than SARS-CoV-2 (~120 nm) (3).
 
@@ -73,6 +72,7 @@ Again, no. Anelloviruses, including GBaV-5, are not associated with disease in b
 
 **Step 1. Download Virus Sequences**
 
+```python 
 from Bio import Entrez 
 Entrez.email = "tdavi195@charlotte.edu"
 handle = Entrez.efetch(db="nucleotide", id="OP629194", rettype="fasta", retmode="text")
@@ -80,9 +80,11 @@ record = handle.read()
 handle.close()
 with open("OP629194.fasta", "w") as f:
 f.write(record)
+```
 
 **Step 2. Find ORFs Bigger than 300bp**
 
+```python
 from Bio import SeqIO
 from Bio.Seq import Seq
 from Bio.SeqUtils import nt_search
@@ -117,9 +119,11 @@ with open("OP629194_ORFs.fasta", "w") as output_file:
  output_file.write(f"
                    
 print("ORFs saved to OP629194_ORFs.fasta")
+```
 
 **Step 3. Exporting the Proteome File**
 
+```python
 from Bio import SeqIO
 
 orfs = list(SeqIO.parse("OP629194_ORFs.fasta", "fasta"))
@@ -135,9 +139,11 @@ with open("OP629194_proteome.fasta", "w") as out_file:
         out_file.write(str(prot) + "\n")
 
 print(f"{len(proteins)} proteins saved to OP629194_proteome.fasta")
+```
 
 **Step 4. Bulk Download Sequences from NCBI**
 
+```python
 import numpy as np
 from Bio import Entrez
 import sys; sys.path.append(".")
@@ -145,7 +151,7 @@ email = "tdavi195@charlotte.edu"
 
 accession_codes = {
     "Pitorquevirus": [
-        "OP629190", "OP629191", "OP629192", "OP629193", "OP629195",
+        "OP629190", "OP629191", "OP629192", "OP629193", "OP629194", "OP629195",
         "OP629196", "OP629197", "AB076002", "MF327548", "MF327541",
         "MF327547", "MF327540", "MF327542", "MF327550", "ON638692"
     ],
@@ -182,7 +188,7 @@ accession_list = [
     "OP629196", "OP629197", "AB076002", "MF327548", "MF327541",
     "MF327547", "MF327540", "MF327542", "MF327550", "ON638692",
     "OK665854", "KF373760", "M55918", "AF345523", "MN994854",
-    "JN632576"
+    "JN632576", "OP629194"
 ]
 
 sequences = fetch_fasta_sequences(accession_list)
@@ -191,13 +197,16 @@ with open("all_sequences.fasta", "w") as f:
  for acc, seq in sequences.items():
  if seq:
  f.write(seq + "\n")
+```
 
 **Step 5. MAFFT Alignment**
 
+```python
 from Bio import Entrez
 from Bio import SeqIO
 from io import StringIO
 import time
+
 def calculate_sequence_lengths(sequences, accession_codes):
  print("\n{:40} | {:15} | {}".format("Virus Name", "Accession", "Sequence Length"))
  print("-" * 70)
@@ -219,11 +228,14 @@ calculate_sequence_lengths(fasta_sequences, accession_codes)
 import subprocess
 subprocess.run(["mafft", "--auto", "all_sequences.fasta"], stdout=open("all_sequences_aligned.fasta", "w"))
 print("MAFFT alignment saved to 'all_sequences_aligned.fasta'")
+```
 
 **Step 6. Construct Phylogenetic Tree**
 
+```python
 from Bio import Phylo, AlignIO
 from Bio.Phylo.TreeConstruction import DistanceCalculator, DistanceTreeConstructor
+
 aln = AlignIO.read("all_sequences_aligned.fasta", "fasta")
 print("Alignment loaded with", len(aln), "sequences.")
 calculator = DistanceCalculator('identity')
@@ -234,8 +246,10 @@ nj_tree = constructor.nj(distance_matrix)
 Phylo.draw(nj_tree)
 Phylo.write(nj_tree, "virus_tree.nwk", "newick")
 print("Tree saved to virus_tree.nwk")  
+```
 
 **Step 7. Export to FigTree and Assign Bootstrap Values from IQTree**
+
 Following the construction of the tree, I downloaded it to my laptop and used FigTree to view the tree. Additionally, I used IQTree to add bootstrap values.
     
 # Results and Discussion
