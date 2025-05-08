@@ -130,6 +130,7 @@ iqtree -s all_sequences_aligned.fasta -m TEST -bb 1000
 ### Hydrophobicity Plot  
 I generated this plot against the E.coli proteome resulting in Protein 2 having the best hydrophobicity, while Protein 1 had the worst hydrophobicity. The importance of this created plot was to check the hydrophobicity for every viral protein, which can help us determine which proteins were used for processes like host cell entry through the endocytoic pathway.  The code I used to create this plot is down below.
 
+```python
 from Bio import SeqIO
 import matplotlib.pyplot as plt
 
@@ -151,6 +152,7 @@ plt.title("Hydrophobicity of AMV-1 Proteins")
 plt.tight_layout()
 plt.savefig("hydrophobicity_plot.png")
 plt.show()
+```
 
 ![Hydrophobicity Plot](hydrophobicity_plot.png)
 
@@ -159,8 +161,9 @@ plt.show()
 Protein 2 was my outlier protein because it had a significantly better hydrophobicity. Another reason I selected this protein is due to the fact that with a higher hydrophobicity it's more likely to be used in processes like replication and cell entry. I then blasted protein two and the sequence that was annotated was cited as being involved with entry mechanisms. I also blasted protein one because it has the lowest hydrophobicity just to compare the two and see the difference. By blasting the second protein we proved that idea of it being used for important process for the virus such as viral entry. By blasting the first protein we proved the idea that it isn't really useful when regarding on vital entry's or processes a virus may need. This is a very interesting fact because it is similar to other non-enveloped viruses during viral entry.
 
 ### Genome Size Plot  
-The genome size of Apis mellifera virus 1 is 3033 bp. I compared this with 15 related viruses, two different viruses and the outgroup virus. Most genomes were around the same of 3000 bp, with the outgroup (MT138056) being smaller at 2015 bp. The fact that most of the genomes were around the same number of base pairs shows how consistent these genomes are between viruses of the same family. Also, the genome size plot helped show how far from the rest of the group virus MT138056 was. The code I used to create this plot is down below.
+The genome size of Apis mellifera virus 1 is 3033 bp. I compared this with 15 related viruses, two different viruses and the  virus. Most genomes were around the same of 3000 bp, with the outgroup (MT138056) being smaller at 2015 bp. The fact that most of the genomes were around the same number of base pairs shows how consistent these genomes are between viruses of the same family. Also, the genome size plot helped show how far from the rest of the group virus MT138056 was. The code I used to create this plot is down below.
 
+```python
 import matplotlib.pyplot as plt
 genome_lengths = {
     'MH973742': 3033,
@@ -189,6 +192,7 @@ plt.title("Genome Sizes of AMV-1 and Related Viruses")
 plt.tight_layout()
 plt.savefig("genome_size_plot.png")
 plt.show()
+```
 
 ![Genome Size Plot](genome_size_plot.png)
 
